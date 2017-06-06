@@ -1,0 +1,9 @@
+{
+  "name": "YATDA",
+  "version": "0.0.1",
+  "description": "Yet Another To Do App",
+  "main": "index.js",
+  "repository": "https://github.com/YATDA/YATDA.git",
+  "author": "The YATDA team",
+  "license": "MIT"
+}
