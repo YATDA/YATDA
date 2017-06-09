@@ -4,7 +4,7 @@
   "description": "Yet Another To Do App",
   "main": "index.js",
   "repository": "https://github.com/YATDA/YATDA.git",
-  "author": "The YATDA team",
+  "author": "The YATDA team: Edwin",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.24.1",
