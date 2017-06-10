@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPluginConfig = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: "./dev/index.js",
@@ -20,7 +21,12 @@ module.exports = {
       title: "Playground",
       hash: true,
       template: "./dev/index.html"
-    })
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: 'dev/favicon.ico', to: 'dist/favicon.ico'
+      }
+    ])
   ],
   devServer: {
     port: 3000
