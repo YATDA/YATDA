@@ -19,11 +19,15 @@
   "dependencies": {
     "aphrodite": "^1.2.1",
     "express": "^4.15.3",
+    "nodemon": "^1.11.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "redux": "^3.6.0"
   },
   "scripts": {
-    "test": "echo \"No Tests Yet....\""
+    "start": "nodemon index.js",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
+    "test": "echo \"No Tests Yet....\"",
+    "watch": "webpack --progress --colors --watch"
   }
 }
