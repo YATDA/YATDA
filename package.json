@@ -29,5 +29,8 @@
     "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "test": "echo \"No Tests Yet....\"",
     "watch": "webpack --progress --colors --watch"
+  },
+  "engines": {
+    "node": "8.0.0"
   }
 }
