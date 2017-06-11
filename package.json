@@ -4,7 +4,7 @@
   "description": "Yet Another To Do App",
   "main": "index.js",
   "repository": "https://github.com/YATDA/YATDA.git",
-  "author": "The YATDA team: Edwin, Laura, Nelson",
+  "author": "The YATDA team: Edwin, Laura, Nelson, Michelle",
   "license": "MIT",
   "dependencies": {
     "aphrodite": "^1.2.1",
