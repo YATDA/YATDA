@@ -1,8 +1,6 @@
 import React from 'react';
 import TodoItem from './components/TodoItem';
 
-import storageUtils from './utils/StorageUtils';
-
 const {Component} = React;
 
 export default class App extends Component {
@@ -10,7 +8,7 @@ export default class App extends Component {
     super();
     this.state = {
       newTodo: '',
-      todos: storageUtils.localStorageGet('todos') || [],
+      todos: [],
     };
   }
 
@@ -25,7 +23,6 @@ export default class App extends Component {
 
     const newTodos = todos.slice();
     newTodos.push(newTodo);
-    storageUtils.localStorageSet('todos', newTodos);
     this.setState({
       newTodo: '',
       todos: newTodos,
