@@ -9,13 +9,13 @@ export default class App extends Component {
   constructor() {
     super();
     this.state = {
-      todos: storageUtils.localStorageGet('todos') || [], 
       newTodo: '',
+      todos: storageUtils.localStorageGet('todos') || [],
     };
   }
 
   onInputChange(event) {
-    this.setState({newTodo:event.target.value});
+    this.setState({newTodo: event.target.value});
   }
 
   handleSubmit(event) {
@@ -27,8 +27,8 @@ export default class App extends Component {
     newTodos.push(newTodo);
     storageUtils.localStorageSet('todos', newTodos);
     this.setState({
-      todos: newTodos,
       newTodo: '',
+      todos: newTodos,
     });
   }
 
@@ -37,9 +37,9 @@ export default class App extends Component {
     return (
       <form onSubmit={this.handleSubmit.bind(this)}>
         <input
-         placeholder="Add a Todo Item"
-         onChange={this.onInputChange.bind(this)}
-         value={this.state.newTodo}
+          placeholder="Add a Todo Item"
+          onChange={this.onInputChange.bind(this)}
+          value={this.state.newTodo}
         />
       </form>
     );
@@ -49,7 +49,7 @@ export default class App extends Component {
   renderTodoList() {
     const {todos} = this.state;
 
-    return todos.map((todo) => <TodoItem name={todo} key={todo} />);
+    return todos.map(todo => <TodoItem name={todo} key={todo} />);
   }
 
   render() {

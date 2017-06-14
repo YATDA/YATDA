@@ -1,12 +1,20 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPluginConfig = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+const {HotModuleReplacementPlugin, NoEmitOnErrorsPlugin} = webpack;
+
 module.exports = {
+  context: __dirname,
+
   devServer: {port: 3000},
 
   // the starting file from which webpack will compile
-  entry: './dev/index.js',
+  entry: [
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    './dev/index.js',
+  ],
 
   /**
    * These are all of the modules that webpack uses to compile our code.
@@ -15,7 +23,6 @@ module.exports = {
    */
   module: {
     loaders: [
-
       /**
        * This loader looks that all code that fits the test (RegEx)
        * and passes it through babel.
@@ -30,6 +37,7 @@ module.exports = {
   output: {
     filename: 'bundle.[hash].js',
     path: path.resolve(__dirname, 'dist'),
+    publicPath: '/',
   },
 
   /**
@@ -37,7 +45,6 @@ module.exports = {
    * things that the loaders do not.
    */
   plugins: [
-
     /**
      * The HtmlWebpackPlugin creates an HTML file based off of a template. The
      * template is optional but gives more flexibility as to what your HTML
@@ -60,6 +67,16 @@ module.exports = {
         to: 'dist/favicon.ico',
       },
     ]),
+
+    /**
+     * Hot Module reloading
+     */
+    new HotModuleReplacementPlugin(),
+
+    /**
+     * Assets that have errors will not be re-bundled.
+     */
+    new NoEmitOnErrorsPlugin(),
   ],
 
   // This is a list of filetypes that should be resolved by webpack
