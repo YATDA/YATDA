@@ -7,7 +7,6 @@ const port = process.env.PORT || DEFAULT_PORT;
 const app = express();
 
 if (process.env.NODE_ENV === 'DEV') {
-  console.log('hit');
   // Step 1: Create & configure a webpack compiler
   const webpack = require('webpack');
   const webpackConfig = require('./webpack.config');
