@@ -12,7 +12,9 @@ module.exports = {
 
   // the starting file from which webpack will compile
   entry: [
+    // entry point for hot reloading
     'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    // entry point for our app
     './dev/index.js',
   ],
 
