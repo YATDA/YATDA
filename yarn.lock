@@ -1568,6 +1568,10 @@ escodegen@^1.6.1:
   optionalDependencies:
     source-map "~0.2.0"
 
+eslint-plugin-babel@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-4.1.1.tgz#ef285c87039b67beb3bbd227f5b0eed4fb376b87"
+
 eslint-plugin-react@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/eslint-plugin-react/-/eslint-plugin-react-7.1.0.tgz#27770acf39f5fd49cd0af4083ce58104eb390d4c"

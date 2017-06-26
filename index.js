@@ -24,6 +24,7 @@ if (process.env.NODE_ENV === 'DEV') {
   app.use(
     require('webpack-hot-middleware')(compiler, {
       heartbeat: 10000,
+      // eslint-disable-next-line no-console
       log: console.log,
       path: '/__webpack_hmr',
     }),

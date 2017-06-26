@@ -8,8 +8,7 @@ const StorageUtils = {
 
   localStorageSet: function(key, value) {
     LOCAL_STORAGE.setItem(key, JSON.stringify(value));
-  }
+  },
 };
-
 
 export default StorageUtils;

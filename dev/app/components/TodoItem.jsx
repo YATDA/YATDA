@@ -1,7 +1,9 @@
 import React from 'react';
 
-const TodoItem = props => {
-  return <div>{props.name}</div>;
-};
+function TodoItem(props) {
+  return <div className={props.className}>{props.name}</div>;
+}
+
+TodoItem.displayName = 'TodoItem';
 
 export default TodoItem;
