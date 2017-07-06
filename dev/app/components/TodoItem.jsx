@@ -6,7 +6,7 @@ function TodoItem(props) {
 
 TodoItem.propTypes = {
   className: PropTypes.string,
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
 };
 
 TodoItem.displayName = 'TodoItem';
