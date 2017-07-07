@@ -1,3 +1,4 @@
+import Header from './components/Header';
 import React from 'react';
 import TextInput from './components/TextInput';
 import TodoList from './components/TodoList';
@@ -23,6 +24,7 @@ export default class App extends Component {
   render() {
     return (
       <div style={{textAlign: 'center'}}>
+        <Header title="My Todos" />
         <TextInput placeholder="Add a Todo Item" onSubmit={this.handleSubmit} />
         <TodoList todos={this.state.todos} />
       </div>
