@@ -10,6 +10,8 @@ module.exports = {
 
   devServer: {port: 3000},
 
+  devtool: 'source-map',
+
   // the starting file from which webpack will compile
   entry: [
     // entry point for hot reloading
