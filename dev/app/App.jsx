@@ -1,33 +1,19 @@
-import Header from './components/Header';
+import LeftHandColumn from './components/left-hand-column/LeftHandColumn';
+import MainColumn from './components/main-column/MainColumn';
 import React from 'react';
-import TextInput from './components/TextInput';
-import TodoList from './components/TodoList';
+import RightHandColumn from './components/right-hand-column/RightHandColumn';
+require('bulma/css/bulma.css');
 require('./index.css');
 
 const {Component} = React;
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {todos: []};
-
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleSubmit(newTodo) {
-    const {todos} = this.state;
-
-    const newTodos = todos.slice();
-    newTodos.push(newTodo);
-    this.setState({todos: newTodos});
-  }
-
   render() {
     return (
-      <div style={{textAlign: 'center'}}>
-        <Header title="My Todos" />
-        <TextInput placeholder="Add a Todo Item" onSubmit={this.handleSubmit} />
-        <TodoList todos={this.state.todos} />
+      <div className="columns">
+        <LeftHandColumn />
+        <MainColumn />
+        <RightHandColumn />
       </div>
     );
   }
