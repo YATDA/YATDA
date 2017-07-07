@@ -11,7 +11,7 @@ function TodoList(props) {
 }
 TodoList.propTypes = {
   todos: PropTypes.func.isRequired
-  className: PropTypes.string
+  className: PropTypes.string.isRequired
 };
 TodoList.displayName = 'TodoList';
 
