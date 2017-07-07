@@ -30,6 +30,7 @@ module.exports = {
        * and passes it through babel.
        */
       {exclude: /node_modules/, loader: 'babel-loader', test: /\.jsx?/},
+      {loader: ['style-loader', 'css-loader'], test: /\.css$/},
     ],
   },
 
