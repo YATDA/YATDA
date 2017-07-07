@@ -10,7 +10,7 @@ function TodoList(props) {
   return <div className={props.className}>{todoItems}</div>;
 }
 TodoList.propTypes = {
-  todos: PropTypes.func.isRequired
+  todos: PropTypes.func.isRequired,
   className: PropTypes.string.isRequired
 };
 TodoList.displayName = 'TodoList';
