@@ -2,6 +2,7 @@ import Header from './components/Header';
 import React from 'react';
 import TextInput from './components/TextInput';
 import TodoList from './components/TodoList';
+require('./index.css');
 
 const {Component} = React;
 

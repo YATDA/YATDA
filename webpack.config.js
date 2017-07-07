@@ -10,6 +10,8 @@ module.exports = {
 
   devServer: {port: 3000},
 
+  devtool: 'source-map',
+
   // the starting file from which webpack will compile
   entry: [
     // entry point for hot reloading
@@ -30,6 +32,7 @@ module.exports = {
        * and passes it through babel.
        */
       {exclude: /node_modules/, loader: 'babel-loader', test: /\.jsx?/},
+      {loader: ['style-loader', 'css-loader'], test: /\.css$/},
     ],
   },
 
