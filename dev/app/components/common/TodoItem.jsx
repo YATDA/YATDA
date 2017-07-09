@@ -10,7 +10,7 @@ function TodoItem(props) {
 }
 
 TodoItem.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
 };
 
