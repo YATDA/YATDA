@@ -6,7 +6,7 @@ import classNames from 'classnames';
 export default class RightHandColumn extends React.Component {
   render() {
     return (
-      <div className={classNames('column', 'left-hand-column')}>
+      <div className={classNames('box', 'column', 'right-hand-column')}>
         {'Right hand column'}
       </div>
     );

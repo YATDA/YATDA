@@ -25,7 +25,7 @@ export default class MainColumn extends Component {
 
   render() {
     return (
-      <div className={classNames('column', 'main-column')}>
+      <div className={classNames('box', 'column', 'main-column')}>
         <Header title="My Todos" />
         <TextInput placeholder="Add a Todo Item" onSubmit={this.handleSubmit} />
         <TodoList todos={this.state.todos} />
