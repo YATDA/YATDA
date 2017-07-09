@@ -23,6 +23,15 @@ export default class MainColumn extends Component {
     this.setState({todos: newTodos});
   }
 
+  removeTodo(todo) {
+    const todos = this.state;
+    const index = todos.indexOf(todo);
+    const newTodos = todos.slice();
+    newTodos.splice(index, 1);
+
+    this.setState({todos: newTodos});
+  }
+
   render() {
     return (
       <div className={classNames('box', 'column', 'main-column')}>
