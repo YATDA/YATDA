@@ -8,10 +8,8 @@ function TodoItem(props) {
     console.log(props.name);
   }
   return (
-    <div className={props.className}>
-      <a href= {props.name} onClick={handleClick}>
-        {props.name}
-      </a>
+    <div className={props.className} onClick={handleClick}>
+      {props.name}
     </div>
   );
 }
