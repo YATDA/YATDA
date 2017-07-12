@@ -4,7 +4,6 @@ import React from 'react';
 
 function TodoItem(props) {
   function handleClick(event){
-    event.preventDefault();
     console.log(props.name);
   }
   return (
