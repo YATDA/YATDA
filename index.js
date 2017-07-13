@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'DEV') {
     require('webpack-dev-middleware')(compiler, {
       noInfo: true,
       publicPath: webpackConfig.output.publicPath,
-    }),
+    })
   );
 
   // Step 3: Attach the hot middleware to the compiler & the server
@@ -27,7 +27,7 @@ if (process.env.NODE_ENV === 'DEV') {
       // eslint-disable-next-line no-console
       log: console.log,
       path: '/__webpack_hmr',
-    }),
+    })
   );
 }
 
