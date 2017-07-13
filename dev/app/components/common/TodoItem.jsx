@@ -1,13 +1,19 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 
+
 function TodoItem(props) {
+  function handleClick(event){
+    console.log(props.name);
+  }
   return (
-    <div className={props.className}>
+    <div className={props.className} onClick={handleClick}>
       {props.name}
     </div>
   );
 }
+
+
 
 TodoItem.propTypes = {
   className: PropTypes.string.isRequired,
