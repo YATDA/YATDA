@@ -4,7 +4,7 @@ import TodoItem from './TodoItem';
 
 function TodoList(props) {
   const todoItems = props.todos.map(function(todo) {
-    return <TodoItem name={todo} key={todo} />;
+    return <TodoItem className="yatda-list-item" name={todo} key={todo} />;
   });
 
   return (
