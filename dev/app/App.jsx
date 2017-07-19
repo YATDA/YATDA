@@ -13,8 +13,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <div className={classNames('container', 'columns is-gapless is-mobile', 'main')}>
-          <div className={'column is-offset-1'}>
+        <div className={classNames('container', 'columns is-mobile', 'main')}>
+          <div className={'column'}>
             <LeftHandColumn />
           </div>
           <div className={'column'}>
@@ -23,7 +23,6 @@ export default class App extends Component {
           <div className={'column'}>
             <RightHandColumn />
           </div>
-          <div /> {/* hack to bypass box last child bug */}
         </div>
         <Footer title='Footer'/>
       </div>
