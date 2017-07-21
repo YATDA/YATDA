@@ -5,9 +5,9 @@ import classNames from 'classnames';
 function Header(props) {
   return (
     <div className={classNames('card-header', props.className)}>
-      <span className={'has-text-centered'}>
+      <div className={'content has-text-centered'}>
         {props.title}
-      </span>
+      </div>
     </div>
   );
 }
