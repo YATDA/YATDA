@@ -37,7 +37,7 @@ export default class MainColumn extends Component {
       <div className={classNames('box', 'column', 'main-column')}>
         <Header title="My Todos" />
         <TextInput placeholder="Add a Todo Item" onSubmit={this.handleSubmit} />
-        <TodoList todos={this.state.todos} />
+        <TodoList className="yatda-list" todos={this.state.todos} />
       </div>
     );
   }
