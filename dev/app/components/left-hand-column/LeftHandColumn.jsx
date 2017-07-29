@@ -21,14 +21,14 @@ export default class LeftHandColumn extends React.Component {
     this.setState({lists: newLists});
   }
 
-  removeList(list) {
-    const lists = this.state;
+/*   removeList(list) {
+    const {lists} = this.state;
     const index = lists.indexOf(list);
     const newLists = lists.slice();
     newLists.splice(index, 1);
 
     this.setState({lists: newLists});
-  }
+  } */
 
   render() {
     return (
